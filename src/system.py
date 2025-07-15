@@ -1,11 +1,12 @@
 'Sistema bancário básico'
 
-menu_de_operacao = """
-    [0] Depositar
-    [1] Sacar
-    [2] Extrato Bancário
-    [3] Sair
-"""
+menu_de_operacao = [
+    0 Depositar
+    1 Sacar
+    2 Extrato Bancário
+    3 Sair
+]
+
 
 LIMITE_DE_SAQUES_DIARIO = 3
 numero_de_saques = 0
