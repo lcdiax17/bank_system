@@ -1,5 +1,3 @@
-print('Sistema bancário')
-
 menu_de_operacao = """
     [0] Depositar
     [1] Sacar
@@ -26,9 +24,10 @@ while True:
         if valor > 0:
             saldo += valor
             extrato.append(f"Deposito: R$ {valor:.2f}")
+            print("Deposito realizado com sucesso")
 
         else:
-            print("Erro! Valor depositado é invalído ou insuficiente")
+            print("Erro! Valor depositado é invalído")
 
     elif opcao_selecionada == "1":
 
@@ -52,6 +51,7 @@ while True:
             saldo -= valor
             numero_de_saques += 1
             extrato.append(f"Saque: R$ {valor:.2f}")
+            print("Saque realizado com sucesso")
 
     elif opcao_selecionada == "2":
 
@@ -61,10 +61,19 @@ while True:
         if not extrato:
             print("Nenhuma movimentação realizada")
         else:
+
             if tipo == "1":
                 for tipo_extrato in extrato:
                     if "Deposito" in tipo_extrato:
                         print(tipo_extrato)
+
+            elif tipo == "2":
+                for tipo_extrato in extrato:
+                    if "Saque" in tipo_extrato:
+                        print(tipo_extrato)
+
+            elif tipo == "3":
+                print(tipo_extrato)
 
     elif opcao_selecionada == "3":
         break
